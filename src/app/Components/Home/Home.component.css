@@ -1,0 +1,81 @@
+.ContainerHome{
+    width: 95%;
+    margin-left: 2.5%;
+    height: 60%;
+    margin-top: 2.5%;
+}
+.Container{
+    width: 90%;
+    background: white;
+    height: 100%;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+header {
+    background-color: #333;
+    padding: 10px;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }  
+  main {
+    text-align: center;
+  }
+  
+  section {
+    padding: 50px;
+    background-color: #ffffff;
+    display: none;
+    /* overflow-y: scroll; */
+    scroll-behavior: smooth;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  section:target {
+    display: block;
+    opacity: 1;
+  }
+  .floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .icon-background {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/185/185988.png');
+    background-size: cover; 
+    background-position: center;
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-link {
+    background-image: url('https://e7.pngegg.com/pngimages/342/689/png-clipart-linkedin-logo-icon-others-blue-text.png');
+    background-size: cover; 
+    background-position: center;
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-email {
+    background-image: url('https://c0.klipartz.com/pngpicture/105/439/gratis-png-ilustracion-del-icono-del-mensaje-en-blanco-y-azul-correo-electronico-del-simbolo-de-los-iconos-de-la-computadora-bandeja-de-entrada-del-mensaje-por-gmail-sobre-thumbnail.png');
+    background-size: cover; 
+    background-position: center;
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-icon {
+    color: white; 
+  }

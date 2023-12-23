@@ -1,0 +1,73 @@
+<div style="width: 500px;">
+  <mat-card class="example-card" style="width: 95%; margin-left: 2.5%; margin-top: 2.5%; margin-bottom: 2.5%;">
+    <mat-divider></mat-divider>
+    <div style="text-align: center;">
+      <h2>Información Restaurante</h2>
+    </div>
+    <mat-divider></mat-divider>
+    <div>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row">Nombre:</th>
+            <td>{{RestaurantSelect.name}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Calle:</th>
+            <td>{{RestaurantSelect.address.street}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Ciudad:</th>
+            <td>{{RestaurantSelect.address.city}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Estado:</th>
+            <td>{{RestaurantSelect.address.state}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Calificaicón:</th>
+            <td>
+              <ng-container *ngIf="RestaurantSelect.rating > 0; else noRating">
+                <ng-container *ngFor="let _ of obtenerEstrellas(); let i = index">
+                  <mat-icon style="color:rgb(255, 208, 0);">star</mat-icon>
+                </ng-container>
+              </ng-container>
+              <ng-template #noRating>
+                <b>Sin calificación</b>
+              </ng-template>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <mat-divider></mat-divider>
+    <section>
+      <div class="example-button-row">
+        <div class="example-flex-container">
+          <div class="example-button-container">
+            <button mat-fab color="primary" (click)="redirigirAGmail(RestaurantSelect.contact.email)" aria-label="Example icon button with a delete icon">
+              <mat-icon>mail</mat-icon>
+            </button>
+          </div>
+          <div class="example-button-container">
+            <button mat-fab color="accent" (click)="redirigirATelefono(RestaurantSelect.contact.phone)" aria-label="Example icon button with a bookmark icon">
+              <mat-icon>call</mat-icon>
+            </button>
+          </div>
+          <div class="example-button-container">
+            <button mat-fab color="warn" (click)="redirigirAMapa(RestaurantSelect.address.location.lat, RestaurantSelect.address.location.lng)" aria-label="Example icon button with a home icon">
+              <mat-icon>location_on</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+<mat-divider></mat-divider>
+<div style="text-align: center;">
+  <br>
+  <button mat-button (click)="cancelar()" style="background: rgb(206, 162, 41);color: white;">Cerrar Modal</button>
+  <br>
+  <br>
+</div>
+  </mat-card>
+</div>
